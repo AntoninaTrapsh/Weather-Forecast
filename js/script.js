@@ -8,7 +8,6 @@ class Card {
         this.weather = {};
         this.temp = {};
         this.imageURL = "http://openweathermap.org/img/w/";
-        this.searchProcess = false;
         this.id = null;
         this.count = 40;
         this.list = [];

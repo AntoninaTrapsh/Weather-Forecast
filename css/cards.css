@@ -31,3 +31,10 @@
 p {
     margin: 5px;
 }
+
+@media (max-width: 535px) {
+    .weather__card {
+        max-height: 180px;
+        max-width: 280px;
+    }
+}

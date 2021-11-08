@@ -25,14 +25,14 @@ class Card {
     }
 
     async loadInformation() {
+        this.showLoader();
         const response = await fetch(`${this.API}weather?q=${this.city}&appid=${this.key}`);
         const data = await response.json();
         this.weather = data.weather[0];
         this.temp = data.main;
         this.city = data.name;
         this.id = data.id;
-        console.log(this.weather);
-        console.log(this.temp);
+        this.hideLoader()
     }
 
     renderCard() {
@@ -70,6 +70,7 @@ class Card {
     }
 
     async getMoreInformation() {
+        this.showLoader();
         const response = await fetch(`${this.API}forecast?id=${this.id}&cnt=${this.count}&appid=${this.key}`);
         const data = await response.json();
         this.list = data.list;
@@ -80,6 +81,7 @@ class Card {
             this.date = card.dt_txt;
             this.renderCard()
         }
+        this.hideLoader();
         this.isActive = true;
     }
 
@@ -90,6 +92,18 @@ class Card {
             moreCard[i].remove();
             this.isActive = false;
         }
+    }
+
+    showLoader() {
+        const template = document.querySelector(".loader-template");
+        const content = document.importNode(template.content, true);
+        const placeLoader = document.querySelector(".container");
+        placeLoader.insertBefore(content, document.querySelector("header"));
+    }
+
+
+    hideLoader() {
+        document.querySelector(".loader").remove();
     }
 }
 
@@ -123,6 +137,7 @@ searchInput.addEventListener("keypress", (e) => {
                     })
                 })
                 .catch(() => {
+                    weather.hideLoader();
                     weather.deleteOldCard();
                     const errorDiv = document.createElement("div")
 

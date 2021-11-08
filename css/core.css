@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Zen Kurenaido', sans-serif;;
+}
+
+.container {
+    max-width: 100%;
+    min-width: 320px;
+}
+
+.wrap {
+    padding: 15px 50px;
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+.search__city {
+    border-radius: 10px;
+}

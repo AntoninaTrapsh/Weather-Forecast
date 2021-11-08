@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/dark.css" id="theme-link">
+</head>
+<body>
+<div class="container">
+    <header>
+        <nav class="wrap">
+            <input class = "search__city" type="text" placeholder="Search">
+            <label class="switch">
+                <input class = "checkTheme" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </nav>
+
+
+    </header>
+
+    <main>
+        <section class="weather wrap">
+            <h1>Weather Forecast</h1>
+            <div class="weather__cards">
+                <template class="weather__card-template">
+                    <div class="weather__card">
+                        <p class="weather__card-city"></p>
+                        <img class="weather__card-image" src="" alt="" />
+                        <p class="weather__card-temp"></p>
+                        <p class="weather__card-description"></p>
+                    </div>
+                </template>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

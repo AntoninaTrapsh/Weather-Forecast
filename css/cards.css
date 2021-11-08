@@ -1,0 +1,33 @@
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 220px;
+    width: 400px;
+    margin: 30px auto;
+    font-size: 25px;
+}
+
+.weather__card:hover {
+    cursor: pointer;
+}
+
+.weather__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+p {
+    margin: 5px;
+}

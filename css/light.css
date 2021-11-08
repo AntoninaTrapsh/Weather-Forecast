@@ -1,0 +1,20 @@
+body {
+    background-color: #f8f5f2;
+}
+
+header {
+    background-color: #f45d48;
+}
+
+.weather__card {
+    /*background-color: #078080;*/
+    background-color: #5db8cf;
+}
+
+h1 {
+    color: #222525;
+}
+
+.weather__card:hover {
+    box-shadow: 0 0 10px black;
+}

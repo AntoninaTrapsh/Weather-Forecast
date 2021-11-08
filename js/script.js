@@ -132,7 +132,14 @@ searchInput.addEventListener("keypress", (e) => {
                                     }
                                 })
                             })
-                            .catch(() => console.log("error"))
+                            .catch(() => {
+                                weather.hideLoader();
+                                const errorDiv = document.createElement("div")
+                                weather.deleteOldCard();
+                                errorDiv.classList.add("weather__card");
+                                errorDiv.innerText = "Loading Error";
+                                document.querySelector(".weather__cards").appendChild(errorDiv);
+                            })
                         }
                     })
                 })

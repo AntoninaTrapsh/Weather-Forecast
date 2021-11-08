@@ -42,7 +42,7 @@ class Card {
   constructor() {
     this.API = "https://api.openweathermap.org/data/2.5/";
     this.key = "597979cc37960a1798c02999147019f3";
-    this.city = "Moscow";
+    this.city = null;
     this.weather = null;
     this.temp = null;
     this.imageURL = "http://openweathermap.org/img/w/";

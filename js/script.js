@@ -101,7 +101,7 @@ searchInput = document.querySelector(".search__city");
 searchInput.addEventListener("keypress", (e) => {
     if (e.code === 'Enter') {
         if (!searchInput.value) {
-            console.log("Empty");
+            console.log("Empty request");
         } else {
             weather.changeCard(searchInput.value);
             weather.loadInformation()

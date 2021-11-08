@@ -3,12 +3,12 @@ body {
 }
 
 header {
-    background-color: #f45d48;
+    background-color: #eb7b6c;
 }
 
 .weather__card {
-    /*background-color: #078080;*/
-    background-color: #5db8cf;
+    background-color: #b2e5ed;
+
 }
 
 h1 {
@@ -17,4 +17,8 @@ h1 {
 
 .weather__card:hover {
     box-shadow: 0 0 10px black;
+}
+
+p {
+    color: #222525;
 }

@@ -3,7 +3,7 @@ console.log(link);
 class Card {
     constructor() {
         this.API = "https://api.openweathermap.org/data/2.5/";
-        this.key = "9005ba591d4f56ff347b61d91ae3963e"
+        this.key = "597979cc37960a1798c02999147019f3"
         this.city = "Moscow";
         this.weather = {};
         this.temp = {};
@@ -155,3 +155,19 @@ function ChangeTheme() {
     console.log(currentTheme);
     link.setAttribute("href", currentTheme);
 }
+
+const btn = document.querySelector(".scrollToTop");
+btn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+})
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > window.screen.height) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+});

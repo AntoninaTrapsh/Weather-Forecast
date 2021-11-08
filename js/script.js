@@ -21,7 +21,7 @@ class Card {
 
         defaultDiv.classList.add("weather__card");
         defaultDiv.innerText = "Enter your city"
-        document.querySelector("main").appendChild(defaultDiv);
+        document.querySelector(".weather__cards").appendChild(defaultDiv);
     }
 
     async loadInformation() {
@@ -128,7 +128,7 @@ searchInput.addEventListener("keypress", (e) => {
 
                     errorDiv.classList.add("weather__card");
                     errorDiv.innerText = "City is not found"
-                    document.querySelector("main").appendChild(errorDiv);
+                    document.querySelector(".weather__cards").appendChild(errorDiv);
                 });
             searchInput.value = "";
         }

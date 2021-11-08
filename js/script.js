@@ -27,6 +27,7 @@ class Card {
         this.showLoader();
         const response = await fetch(`${this.API}weather?q=${this.city}&appid=${this.key}`);
         const data = await response.json();
+        console.log(data);
         this.weather = data.weather[0];
         this.temp = data.main;
         this.city = data.name;

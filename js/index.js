@@ -174,24 +174,19 @@ searchInput === null || searchInput === void 0 ? void 0 : searchInput.addEventLi
         }
         else {
             weather.changeCard(searchInput.value);
-            weather
-                .loadInformation()
+            weather.loadInformation()
                 .then(function () {
                 var _a;
                 weather.deleteOldCard();
                 weather.renderCard();
-                (_a = document
-                    .querySelector(".weather__card")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function (e) {
+                (_a = document.querySelector(".weather__card")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
                     if (!weather.isActive) {
-                        weather
-                            .getMoreInformation()
+                        weather.getMoreInformation()
                             .then(function () {
                             var _a;
-                            (_a = document
-                                .querySelector(".weather__card")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function (e) {
+                            (_a = document.querySelector(".weather__card")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
                                 var _a;
-                                if (((_a = document.querySelectorAll(".weather__card")) === null || _a === void 0 ? void 0 : _a.length) >
-                                    1) {
+                                if (((_a = document.querySelectorAll(".weather__card")) === null || _a === void 0 ? void 0 : _a.length) > 1) {
                                     weather.hideMoreInformation();
                                 }
                             });
@@ -202,8 +197,7 @@ searchInput === null || searchInput === void 0 ? void 0 : searchInput.addEventLi
                             weather.deleteOldCard();
                             errorDiv.classList.add("weather__card");
                             errorDiv.innerText = "Loading Error";
-                            (_a = document
-                                .querySelector(".weather__cards")) === null || _a === void 0 ? void 0 : _a.appendChild(errorDiv);
+                            (_a = document.querySelector(".weather__cards")) === null || _a === void 0 ? void 0 : _a.appendChild(errorDiv);
                         });
                     }
                 });

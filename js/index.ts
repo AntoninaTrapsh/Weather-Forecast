@@ -182,46 +182,34 @@ let searchInput: HTMLInputElement | null = document.querySelector(
   ".search__city"
 );
 
-searchInput?.addEventListener("keypress", (e) => {
+searchInput?.addEventListener("keypress", (e: KeyboardEvent) => {
   if (e.code === "Enter") {
     if (!searchInput?.value) {
       console.log("Empty request");
     } else {
       weather.changeCard(searchInput.value);
-      weather
-        .loadInformation()
-        .then(() => {
+      weather.loadInformation()
+          .then(() => {
           weather.deleteOldCard();
           weather.renderCard();
-          document
-            .querySelector(".weather__card")
-            ?.addEventListener("click", (e) => {
+          document.querySelector(".weather__card")?.addEventListener("click", () => {
               if (!weather.isActive) {
-                weather
-                  .getMoreInformation()
+                weather.getMoreInformation()
                   .then(() => {
-                    document
-                      .querySelector(".weather__card")
-                      ?.addEventListener("click", (e) => {
+                    document.querySelector(".weather__card")?.addEventListener("click", () => {
                         if (
-                          document.querySelectorAll(".weather__card")?.length >
-                          1
-                        ) {
+                          document.querySelectorAll(".weather__card")?.length > 1) {
                           weather.hideMoreInformation();
                         }
                       });
                   })
                   .catch(() => {
                     weather.hideLoader();
-                    const errorDiv: HTMLDivElement = document.createElement(
-                      "div"
-                    );
+                    const errorDiv: HTMLDivElement = document.createElement("div");
                     weather.deleteOldCard();
                     errorDiv.classList.add("weather__card");
                     errorDiv.innerText = "Loading Error";
-                    document
-                      .querySelector(".weather__cards")
-                      ?.appendChild(errorDiv);
+                    document.querySelector(".weather__cards")?.appendChild(errorDiv);
                   });
               }
             });

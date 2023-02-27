@@ -7,6 +7,8 @@
   <img src="https://img.shields.io/badge/JavaScript-202124?style=flat-square&logo=javascript&logoColor=F7DF1E" />
 </div>
 
+<h3 align="center">Посмотреть на <a href="https://antoninatrapsh.github.io/Weather-Forecast-Service/">GitHubPages</a></h3>
+
 <h2 id="about">О проекте</h1>
 <table align="center">
   <tbody>
@@ -26,6 +28,18 @@
   </tbody>
 </table>
 
+<h1 id="install">Установка</h1>
 
-
-<h3 align="center">Посмотреть на <a href="https://antoninatrapsh.github.io/Weather-Forecast-Service/">GitHubPages</a></h3>
+<ol>
+    <li><p>Клонируем репозиторий в рабочую директорию</p></li>
+    <pre>git clone https://github.com/AntoninaTrapsh/Weather-Forecast-Service.git</pre>
+    <li>
+      В рабочей директории должна появиться папка проекта <code>Weather-Forecast-Service</code>
+    </li>
+    <li>
+      Переходим в данную папку.
+    </li>
+    <li>
+        Открываем файл index.js в браузере.
+    </li>
+</ol>
